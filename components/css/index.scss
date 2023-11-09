@@ -1,0 +1,281 @@
+// @import '../../light/theme-chalk/index.css';
+@import "./config.scss";
+@import "./demo.scss";
+
+
+// /* 改变主题色变量 */
+$--color-primary: #336cff;
+$--color-primary-hover: #4e7ffc;
+$--background-color-base: #303642;
+
+$--color-white: #282b33;
+$--color-black: #fff;
+$--border-color-base: #dcdfe6;
+$--color-text-primary: #fff;
+$--color-text-regular: #cdd2dd;
+$--color-text-secondary: #8c97ad;
+$--color-text-placeholder: #616161;
+$--color-info: $--color-text-regular;
+
+// border
+$--border-color-base: #3d475b;
+$--border-color-light: $--border-color-base;
+$--border-color-lighter: $--border-color-base;
+
+// input
+$--input-focus-border: $--color-text-placeholder;
+$--input-border: 1px solid $--border-color-base;
+$--input-background-color: $--background-color-base;
+
+// select
+$--select-input-focus-border-color: $--input-focus-border; 
+$--select-multiple-input-color: $--color-text-regular;
+
+// button
+$--button-primary-font-color: #efefef;
+
+// radio
+$--radio-button-checked-font-color: $--color-black;
+
+// popover
+$--popover-border-color: $--border-color-base;
+
+// popup
+$--popup-modal-background-color: #000;
+$--popup-modal-opacity: 0.5;
+
+// tooltip
+$--tooltip-fill: #444753;
+$--tooltip-color: $--color-text-primary;
+$--tooltip-border-color: $--border-color-base;
+
+// tag
+$--tag-background-color: #ebf6ff;
+$--tag-color: #597191;
+$--tag-background-dark: $--color-white;
+$--tag-border-color-dark: #2c4585;
+$--tag-color-dark: $--color-primary;
+$--tag-background-info: #444b5b;
+$--tag-color-info: #9aabc6;
+
+/* 改变 icon 字体路径变量，必需 */
+/* 改变 icon 字体路径变量，必需 */
+// $--font-path: '../../node_modules/element-ui/lib/theme-chalk/fonts';
+
+
+$--font-path: '~element-ui/lib/theme-chalk/fonts';     // css  ~element-ui/lib/theme-chalk/fonts -> fonts
+
+@import "~element-ui/packages/theme-chalk/src/index";  // 看 gulp 是否支持路径变量 
+// @import "../../node_modules/element-ui/packages/theme-chalk/src/index";  // 看 gulp 是否支持路径变量 
+
+
+
+
+
+// ----------自定义覆盖-------------
+
+// 弹框背景
+.el-loading-mask {
+  background-color: #212328b8;
+}
+// 文件上传
+.el-upload-dragger {
+  background-color: $--background-color-base;
+  border: $--input-border;
+}
+// 分页器
+.el-pagination.is-background .el-pager li:not(.disabled).active {
+  color: $--color-black;
+}
+// slider
+.el-slider__button {
+  background-color: $--color-black;
+}
+// switch
+.el-switch__core:after {
+  background-color: $--color-black;
+}
+// menu
+.el-menu {
+  border-right: solid 1px $--color-white;
+}
+// textarea
+.el-textarea {
+  .el-input__count {
+    background-color: transparent;
+    line-height: 14px;
+    color: $--color-text-secondary;
+  }
+}
+// input
+.el-input {
+  .el-input__count {
+    .el-input__count-inner {
+      background-color: transparent;
+    }
+  }
+}
+
+// button
+.el-button {
+  &--default {
+    &:hover {
+      color: $--color-black;
+      background-color: rgba(0, 0, 0, 0.4);
+      border: 1px solid $--border-color-base;
+    }
+  }
+  &--primary {
+    &.is-disabled {
+      &,
+      &:hover,
+      &:focus,
+      &:active {
+        color: #efefef
+      }
+    }
+  }
+}
+// loading
+.el-select,
+.el-cascader {
+  .el-loading-spinner {
+    svg {
+      width: 26px;
+    }
+  }
+}
+
+// message-box
+.el-message-box {
+  background-color: #2b2f3c;
+  border: none;
+  min-width: 340px;
+  width: fit-content;
+  max-width: 650px;
+  padding-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 38px #000;
+  .el-message-box__header {
+    padding-top: 20px;
+  }
+  .el-message-box__content {
+    padding: 20px 60px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    .el-message-box__status {
+      top: 0;
+      transform: none;
+    }
+  }
+  .el-message-box__btns {
+    padding: 20px 70px;
+    .el-button {
+      padding: 5px 30px;
+      font-size: 12px;
+      line-height: 17px;
+      &--default {
+        background: #30353f;
+        border: 1px solid #3b415f;
+        color: #b8b8b8;
+        border-radius: 4px;
+        &:hover {
+          color: $--color-black;
+          background-color: rgba(0, 0, 0, 0.4);
+          border-color: $--border-color-base;
+        }
+      }
+      &--primary {
+        background-color: $--color-primary;
+        border: none;
+        color: $--color-text-primary;
+        &:hover, &:focus {
+          background-color: $--color-primary-hover;
+        }
+        &:active {
+          background-color: $--color-primary;
+        }
+      }
+      &:last-of-type {
+        margin-left: 30px;
+      }
+    }
+  }
+}
+
+// message
+.el-message {
+  background: #12141b;
+  border-radius: 10px;
+  border: none;
+  padding: 18px 50px;
+  min-width: 255px;
+  .icon-aidraw-toast-success {
+    font-size: 19px;
+    margin-right: 10px;
+    color: #80ab49;
+  }
+  .icon-aidraw-toast-warning {
+    font-size: 19px;
+    margin-right: 10px;
+    color: #c65942;
+  }
+  .el-message__icon {
+    font-size: 20px;
+  }
+  .el-message__no-icon {
+    display: none;
+  }
+  .el-message__content {
+    color: $--color-black;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 300;
+  }
+}
+
+// tag
+.el-tag {
+  background-color: $--tag-background-color;
+  color: $--tag-color;
+  &.el-tag--dark {
+    border-color: $--tag-border-color-dark;
+    background-color: $--tag-background-dark;
+    color: $--tag-color-dark;
+  }
+  &.el-tag--info {
+    background-color: $--tag-background-info;
+    color: $--tag-color-info;
+  }
+}
+
+// table
+.el-table {
+  color: $text-color-primary;
+  thead {
+    color: $text-color-regular;
+  }
+  th.el-table__cell {
+    background-color: $-th-color;
+    &.is-leaf {
+      border-bottom: 1px solid $box-border-color;
+    }
+  }
+  td.el-table__cell {
+    border-bottom: 1px solid $box-border-color;
+  }
+}
+// el-cascader
+.el-cascader {
+  .el-cascader__search-input {
+    color: $--color-text-regular;
+    background-color: $--background-color-base;
+  }
+}
+
+.el-cascader-node {
+  &.is-active {
+    color: $--color-text-regular;
+  }
+}

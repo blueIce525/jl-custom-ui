@@ -5,10 +5,16 @@ module.exports = {
   },
   extends: [
     'plugin:vue/essential',
-    '@vue/airbnb',
+    '@tencent/eslint-config-tencent',
   ],
+  plugins: [
+    'vue',
+  ],
+  parser: 'vue-eslint-parser',
   parserOptions: {
-    parser: '@babel/eslint-parser',
+    parser: 'babel-eslint',
+    ecmaVersion: 2018,
+    sourceType: 'module',
   },
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',

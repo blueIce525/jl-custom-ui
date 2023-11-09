@@ -1,0 +1,47 @@
+/* color */
+$bg-color: #212328;
+
+$box-bg-color: #282b33;
+$box-border-color: #3b415f;
+
+$link-font-color: #03a9f4;
+
+$font-gray-0: #3c3744;
+$font-gray-1: #909399;
+
+/* 新链接颜色 */
+$link-color: #0a6ff8;
+
+/* 链接不同状态颜色 */
+$link-color-defalut: #3385ff;
+$link-color-hover: #0a6ff8;
+$link-color-active: #005bd6;
+$link-color-visited: #3385ff;
+
+
+/* 文字色 */
+// 主要颜色
+$text-color-primary: #e5e6e6;
+// 次要颜色
+$text-color-regular: #7c8dae;
+// 辅助颜色
+$text-color-secondary: #5d6e89;
+// 禁用状态颜色
+$text-color-placeholder: #6d6f74;
+// 提示信息次要颜色
+$tips-text-color-regular: rgba(255, 255, 255, 0.68);
+
+
+/* 整站状态颜色 */
+$-success-color: #00c788 !default;
+$-fail-color: #f04352 !default;
+$-warning-color: #fa974b !default;
+$-waiting-color: #fac228 !default;
+$-normal-color: #37a5ff !default;
+$-running-color: #28a2fa !default;
+$-over-color: #d2dae6 !default;
+
+
+
+/* 表格颜色 */
+$-th-color: #303642;

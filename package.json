@@ -1,7 +1,14 @@
 {
   "name": "jl-custom-ui",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "description": "组件库测试",
+  "main": "./dist/index.umd.js",
+  "author": "hjl",
+  "files": [
+    "dist",
+    "components"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",

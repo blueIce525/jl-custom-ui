@@ -2,8 +2,8 @@ import Vue from 'vue';
 import ElementUI from 'element-ui';
 import App from './App.vue';
 import Test from '../components/lib/index.js';
-import '../components/css/index.scss';
-// import '../dist/css/index.css';
+// import '../components/css/index.scss';
+import '../dist/css/index.css';
 Vue.use(ElementUI);
 Vue.use(Test);
 
